@@ -1,6 +1,7 @@
 <?php 
 class Helper
 {
+
     public static function banknoteBuying($currencyCode, $type = 'buying')
     {
         $request = simplexml_load_file('http://www.tcmb.gov.tr/kurlar/today.xml');
@@ -21,5 +22,13 @@ class Helper
         } else {
             return "XML dosyası yüklenirken bir hata oluştu.";
         }
+    }
+
+    public static function jsonResponse($data) {
+        header("Content-type: application/json");
+        return json_encode([
+            "status" => "success",
+            "data"   => $data
+        ], 256 | JSON_PRETTY_PRINT);
     }
 }
