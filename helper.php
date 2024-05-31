@@ -1,7 +1,7 @@
 <?php 
 class Helper
 {
-    static function banknoteBuying($currencyCode, $type = 'buying')
+    public static function banknoteBuying($currencyCode, $type = 'buying')
     {
         $request = simplexml_load_file('http://www.tcmb.gov.tr/kurlar/today.xml');
 
