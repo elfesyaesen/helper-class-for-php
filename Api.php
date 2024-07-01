@@ -1,5 +1,5 @@
 <?php 
-class Helper
+class Api
 {
 
     public static function banknoteBuying($currencyCode, $type = 'buying')
